@@ -1,5 +1,24 @@
 ﻿const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+const menuToggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('.nav');
+if (menuToggle && nav) {
+  menuToggle.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('open');
+    menuToggle.classList.toggle('open', isOpen);
+    menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+
+  nav.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('open');
+      menuToggle.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+}
+
+
 const glowSelectors = [
   '.panel-card',
   '.focus-card',
