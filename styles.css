@@ -1087,6 +1087,10 @@ body.modal-open {
     font-size: clamp(2.2rem, 9vw, 3.2rem);
   }
 
+  .hero-sub {
+    max-width: 100%;
+  }
+
   .section {
     padding: 60px 0 10px;
   }
@@ -1101,6 +1105,22 @@ body.modal-open {
 
   .profile-photo {
     max-width: 180px;
+  }
+
+  .hero-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .tool-card,
+  .project-card,
+  .focus-card,
+  .panel-card,
+  .skills-card,
+  .cert-card,
+  .education-card,
+  .contact-card,
+  .mission-card {
+    width: 100%;
   }
 }
 
@@ -1118,6 +1138,11 @@ body.modal-open {
     gap: 12px;
     font-size: 0.88rem;
   }
+
+  .site-header {
+    align-items: center;
+    text-align: center;
+  }
 }
 
 @media (hover: none) {
@@ -1127,6 +1152,22 @@ body.modal-open {
   .social-link:hover {
     transform: none;
     box-shadow: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-header h2 {
+    font-size: clamp(1.7rem, 6vw, 2.4rem);
+  }
+
+  .tools-grid,
+  .projects-grid {
+    gap: 18px;
+  }
+
+  .tool-logo {
+    max-width: 150px;
+    height: 72px;
   }
 }
 
